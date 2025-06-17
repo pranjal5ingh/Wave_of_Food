@@ -1,0 +1,154 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#F5F5F5"
+    app:ignore="NamespaceTypo">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/locationCard"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        card_view:cardCornerRadius="16dp"
+        card_view:cardElevation="10dp"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp"
+            android:background="#FAFAFA">
+
+            <ImageView
+                android:id="@+id/location_icon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/location_marker_svgrepo_com"
+                android:contentDescription="Location Icon"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/location_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enable Location"
+                android:fontFamily="@font/yeon_sung"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/location_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/we_need_your_location_to_show_nearby_services_and_improve_recommendations"
+                android:textSize="14sp"
+                android:textColor="@color/textColor"
+                android:gravity="center"
+                android:layout_marginBottom="24dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/getLocationButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Allow Location Access"
+                android:fontFamily="@font/yeon_sung"
+                android:background="@drawable/greenbuttongradient"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/skip_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skip for now"
+                android:fontFamily="@font/yeon_sung"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <!-- ✅ New TextView to Show User Location -->
+            <TextView
+                android:id="@+id/userLocationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your location will appear here"
+                android:fontFamily="@font/yeon_sung"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Manual Enter the Location by the user -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/manualLocationCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:visibility="gone"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp"
+        android:layout_gravity="center"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/locationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location permission denied.\nPlease enter your location manually."
+                android:textAlignment="center"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/manualLocationEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your city or area"
+                android:inputType="text"
+                android:background="@drawable/edittextshape"
+                android:padding="12dp"
+                android:textColorHint="#888888"
+                android:textColor="#000000"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/manualLocationSubmitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit Location"
+                android:backgroundTint="@color/primaryColor"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

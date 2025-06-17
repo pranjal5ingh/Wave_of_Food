@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Wave Of Food</string>
+    <string name="next">Next</string>
+    <string name="enjoy_restaurant_quality_meals_at_home">Enjoy Restaurant Quality Meals \n at Home</string>
+    <string name="desigin_by_n_pranjal_singh">Desigin by \n Pranjal Singh</string>
+    <string name="wave_of_food">Wave Of Food</string>
+    <string name="deliever_favorite_food">Deliever Favorite Food</string>
+    <string name="we_need_your_location_to_show_nearby_services_and_improve_recommendations">We need your location to show nearby services and improve recommendations.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
